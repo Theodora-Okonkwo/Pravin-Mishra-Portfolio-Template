@@ -1119,13 +1119,16 @@ section {
 /* Bottom */
 .footer-bottom {
   border-top: 1px solid #222;
-  padding-top: 20px;
+  padding: 30px 10px 10px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
-  color: #888;
-  font-size: 14px;
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .footer-bottom span {

@@ -40,3 +40,26 @@ Add this line (example):
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+## 📆 Footer Deploy Date
+
+This project dynamically displays the deploy date in the footer.
+
+### ✅ How It Works
+- The footer HTML contains a span with `id="deployDate"`
+- A JavaScript snippet sets the date to today’s value in `DD-MM-YYYY` format.
+
+### 💻 Code Example
+
+```html
+<p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Theodora Okonkwo</p>
+
+<script>
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  }).split('/').join('-');
+  document.getElementById('deployDate').textContent = formattedDate;
+</script>
