@@ -602,12 +602,24 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-         <p>Pravin Mishra Portfolio v1.0 — Deployed on 05-02-2026 — By Theodora Okonkwo</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Theodora Okonkwo</p>
       </div>
 
     </div>
   </footer>
+  <script>
+  // Set current year in copyright
+  document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Set dynamic deploy date
+  const deployDate = new Date();
+  const formattedDate = deployDate.toLocaleDateString("en-GB", {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  }).split('/').join('-'); // converts from DD/MM/YYYY → DD-MM-YYYY
+  document.getElementById("deployDate").textContent = formattedDate;
+ </script>
 
 
 </body>
